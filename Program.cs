@@ -1,10 +1,4 @@
-﻿using System.Threading.Tasks;
-using Statiq.App;
-using Statiq.Common;
-using Statiq.Markdown;
-using Statiq.Web;
-
-namespace Statiq.SampleSite;
+﻿namespace Statiq.SampleSite;
 
 public class Program
 {
@@ -12,5 +6,6 @@ public class Program
         await Bootstrapper
             .Factory
             .CreateWeb(args)
+            .AddSetting(Markdown.MarkdownKeys.MarkdownExtensions, new List<string> { "Bootstrap", "SyntaxHighlighting" })
             .RunAsync();
 }
