@@ -1,5 +1,5 @@
 ﻿---
-layout: /_layout.cshtml
+layout: _layout-post
 title: Hello World!
 categories: [general, setup, demo]
 tags: [demo, dbyll, dbtek, setup]
