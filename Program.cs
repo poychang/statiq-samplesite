@@ -1,4 +1,6 @@
-﻿namespace Statiq.SampleSite;
+﻿using Statiq.Markdown;
+
+namespace Statiq.SampleSite;
 
 public class Program
 {
@@ -6,6 +8,6 @@ public class Program
         await Bootstrapper
             .Factory
             .CreateWeb(args)
-            .AddSetting(Markdown.MarkdownKeys.MarkdownExtensions, new List<string> { "Bootstrap", "SyntaxHighlighting" })
+            .AddSetting(MarkdownKeys.MarkdownExtensions, new List<string> { "Bootstrap", "Prism" })
             .RunAsync();
 }
